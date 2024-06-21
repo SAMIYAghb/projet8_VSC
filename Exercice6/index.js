@@ -27,8 +27,10 @@ const clearDisplay = () => {
 const calculateResult = () => {
   const expression = input.value;
   //   console.log(expression);
+  // évalue l'expression et stocke le résultat dans result
   const result = eval(expression);
 
+  // Number.isFinite() est une méthode statique en JavaScript qui détermine si la valeur passée en argument est un nombre fini. Elle renvoie true si la valeur est un nombre fini, c'est-à-dire qu'elle n'est ni NaN (Not a Number) ni Infinity ni -Infinity. Sinon, elle renvoie false.
   if (Number.isFinite(result)) {
     // input.value = result;
     // Si le résultat est un nombre décimal
@@ -45,4 +47,3 @@ const calculateResult = () => {
 // const result = eval(expression); // évalue l'expression et stocke le résultat dans result
 // console.log(result); // Affiche 30
 
-// Number.isFinite() est une méthode statique en JavaScript qui détermine si la valeur passée en argument est un nombre fini. Elle renvoie true si la valeur est un nombre fini, c'est-à-dire qu'elle n'est ni NaN (Not a Number) ni Infinity ni -Infinity. Sinon, elle renvoie false.

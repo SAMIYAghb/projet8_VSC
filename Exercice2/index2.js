@@ -21,6 +21,14 @@
 //     }
 // }
 const calculate = (a, b, operator) => {
+    // Convertir les entrées en nombres
+  a = Number(a);
+  b = Number(b);
+  // Vérifier si la conversion a échoué
+  if (isNaN(a) || isNaN(b)) {
+    return "Invalid number";
+  }
+  
     switch (operator) {
         case '+':
             return a + b;
@@ -47,5 +55,5 @@ console.log(calculate(7, 2, '*'));   // Affiche 14
 console.log(calculate(12, 3, '/'));  // Affiche 4
 console.log(calculate(8, 0, '/'));   // Affiche "Division by zero is not allowed"
 console.log(calculate(4, 5, '%'));   // Affiche "Invalid operator"
-
+console.log("=============");
 // export default calculate
